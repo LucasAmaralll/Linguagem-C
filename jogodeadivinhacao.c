@@ -27,7 +27,7 @@ int main() {
             printf("Você acertou! \n");
             break;
         } else if (maior) {
-            printf("Seu chute foi maior que o numero secreto, tente novamente! \n");
+            printf("Seu chute foi maior que o número secreto, tente novamente! \n");
         } else {
             printf("Seu chute foi menor que o número secreto, tente novamente! \n");
         }
