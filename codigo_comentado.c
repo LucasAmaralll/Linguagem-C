@@ -4,9 +4,15 @@
 #include <time.h>           // Inclui a biblioteca time.h (trabalhando com tempo)
 
 int main() {
-    printf("******************************************\n");   // Imprime uma linha de asteriscos
-    printf("* Bem-vindo ao nosso jogo de adivinhação *\n"); // Imprime uma mensagem de boas-vindas
-    printf("******************************************\n");   // Imprime outra linha de asteriscos
+    printf ("\n\n"); // Imprime espaços em branco para melhor formatação
+    printf("          P  /_\\  P                               \n"); // Imprime uma arte ASCII
+    printf("         /_\\_|_|_/_\\                             \n"); // Imprime outra parte da arte ASCII
+    printf("     n_n | ||. .|| | n_n         Bem vindo ao      \n"); // Imprime uma mensagem
+    printf("     |_|_|nnnn nnnn|_|_|     Jogo de Adivinhação!  \n"); // Imprime outra mensagem
+    printf("    |" "  |  |_|  |"  " |                          \n"); // Imprime parte da arte ASCII
+    printf("    |_____| ' _ ' |_____|                          \n"); // Imprime o restante da arte ASCII
+    printf("          \\__|_|__/                               \n"); // Imprime a parte inferior da arte ASCII
+    printf ("\n\n"); // Imprime espaços em branco para melhor formatação
 
     int segundos = time(0); // Obtém o número de segundos desde a época (tempo atual)
     srand(segundos);        // Inicializa o gerador de números pseudoaleatórios com a semente (seed) igual ao tempo atual
@@ -54,7 +60,7 @@ int main() {
             continue;
         } 
         
-        int acertou = (chute == numerosecreto); // Verifica se o chute está correto
+        acertou = (chute == numerosecreto); // Verifica se o chute está correto
         int maior = chute > numerosecreto; // Verifica se o chute é maior que o número secreto
 
         if (acertou) { // Se o jogador acertou, sai do loop
@@ -77,10 +83,34 @@ int main() {
     printf ("Fim de Jogo!\n"); // Imprime uma mensagem de fim de jogo
     
     if(acertou) { // Se o jogador acertou, informa que ele ganhou e exibe o número de tentativas e a pontuação
-        printf("Você ganhou!\n");
-        printf("Você acertou em %d tentativas!\n", tentativas);
-        printf("Total de pontos: %.1f\n", pontos);
+        printf("\n\n"); // Imprime espaços em branco para separar o "sorrisão" do restante da saída
+        printf("             OOOOOOOOOOO               \n"); // Imprime a parte superior do "sorrisão"
+        printf("         OOOOOOOOOOOOOOOOOOO           \n"); // Imprime os olhos do "sorrisão"
+        printf("      OOOOOO  OOOOOOOOO  OOOOOO        \n"); // Imprime a boca sorridente do "sorrisão"
+        printf("    OOOOOO      OOOOO      OOOOOO      \n"); // Imprime a parte inferior do "sorrisão"
+        printf("  OOOOOOOO  #   OOOOO  #   OOOOOOOO    \n"); // Imprime a parte inferior do "sorrisão"
+        printf(" OOOOOOOOOO    OOOOOOO    OOOOOOOOOO   \n"); // Imprime a parte inferior do "sorrisão"
+        printf("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO  \n"); // Imprime a parte inferior do "sorrisão"
+        printf("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO  \n"); // Imprime a parte inferior do "sorrisão"
+        printf("OOOO  OOOOOOOOOOOOOOOOOOOOOOOOO  OOOO  \n"); // Imprime a parte inferior do "sorrisão"
+        printf(" OOOO  OOOOOOOOOOOOOOOOOOOOOOO  OOOO   \n"); // Imprime a parte inferior do "sorrisão"
+        printf("  OOOO   OOOOOOOOOOOOOOOOOOOO  OOOO    \n"); // Imprime a parte inferior do "sorrisão"
+        printf("    OOOOO   OOOOOOOOOOOOOOO   OOOO     \n"); // Imprime a parte inferior do "sorrisão"
+        printf("      OOOOOO   OOOOOOOOO   OOOOOO      \n"); // Imprime a parte inferior do "sorrisão"
+        printf("         OOOOOO         OOOOOO         \n"); // Imprime a parte inferior do "sorrisão"
+        printf("             OOOOOOOOOOOO              \n"); // Imprime a parte inferior do "sorrisão"
+        printf("\n\n"); // Imprime espaços em branco para separar o "sorrisão" do restante da saída
+        printf("Parabéns! Você ganhou!\n"); // Informa ao jogador que ele ganhou
+        printf("Você acertou em %d tentativas!\n", tentativas); // Informa o número de tentativas bem-sucedidas
+        printf("Total de pontos: %.1f\n", pontos); // Informa a pontuação final do jogador
     } else { // Se o jogador não acertou, informa que ele perdeu
-        printf("Você perdeu! Tente de novo!\n");
+        printf("Você perdeu! Tente de novo!\n"); // Informa ao jogador que ele perdeu
+
+        printf("\n\n"); // Imprime espaços em branco para melhor formatação
+        printf("       \\|/ ____ \\|/    \n"); // Imprime parte de outra arte ASCII
+        printf("        @~/ ,. \\~@      \n"); // Imprime parte da mesma arte ASCII
+        printf("       /_( \\__/ )_\\    \n"); // Imprime parte da mesma arte ASCII
+        printf("          \\__U_/        \n"); // Imprime parte da mesma arte ASCII
+        printf("\n\n"); // Imprime espaços em branco para melhor formatação
     }
 }
